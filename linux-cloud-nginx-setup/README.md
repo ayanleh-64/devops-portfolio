@@ -8,7 +8,7 @@ The goal is to practice Linux package management, system services, and server co
 1. Updated package lists to ensure latest software versions.
 2. Installed Nginx using `apt`.
 3. Verified the Nginx service was running with `systemctl`.
-4. Testing with curl: I used `curl` to confirm that Nginx was serving pages:
+4. Tested by using `curl` to confirm that Nginx was serving pages:
 
 ## Outcome
 - Successfully hosted a web server inside the VM.
