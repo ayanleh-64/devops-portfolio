@@ -1,61 +1,51 @@
-# DevOps Learning Portfolio  
+# DevOps Portfolio
 
-Welcome to my DevOps portfolio! 
-This repository documents my hands-on journey into DevOps. I’m learning by building real projects step by step — starting with Linux, Git, and scripting, and moving towards cloud infrastructure, CI/CD, containers, Kubernetes, and monitoring.  
-
----
-
-##  Repository Structure  
-devops-portfolio/
-├── README.md # Portfolio overview
-├── notes/ # Notes, cheatsheets, practice scripts
-│ └── cheatsheet.md
-├── linux-cloud-nginx-setup/ # Project 1: Self-hosted blog (coming next)
-
+Welcome to my DevOps portfolio!  
+This repository showcases projects I’ve built to demonstrate hands-on skills in **Linux, Git, Cloud, Terraform, Docker, CI/CD, Kubernetes, and Monitoring**.
 
 ---
 
-## Projects  
+##  Projects
 
-### 1. Notes & Cheatsheets  
-- **Skills**: Git, Linux basics
-- **Description**: A collection of my learning notes and Git cheatsheet. 
-- [View Notes](./notes/)
+- [**Linux & Git Project – Self-Hosted Blog**](./linux-cloud-nginx-setup) 
+  Set up and hosted a static blog on a cloud VM using Nginx, SSH, and Git. 
 
-### 2. Linux & Git Project: Self-Hosted Blog on a Cloud VM  
-- **Skills**: Linux, Git, SSH, Nginx, Bash scripting, cloud basics 
-- **Description**: Host a simple static site or blog on a VM with Nginx. Use Git for version control and write a Bash script to automate setup.  
-- **Status**: 🔄 Planned (starting soon) 
-- [Project Folder](./linux-cloud-nginx-setup/) 
+- [**GitHub Portfolio Repo – Notes & Scripts**](./notes) 
+  Collection of Bash scripts, automation snippets, and Git cheatsheets. 
+
+- [**Terraform Project – EC2 Setup**](./terraform-ec2-setup) 
+  Infrastructure-as-Code: provisioned EC2 instance and installed Nginx using Terraform. 
+
+- [**Docker Project – Containerized App**](./dockerized-app) 
+  Built and deployed a simple Node.js/Flask app in Docker. Pushed images to Docker Hub. 
+
+- [**CI/CD Project – Automated Pipeline**](./github-actions-pipeline) 
+  GitHub Actions pipeline: run tests, build Docker image, push to Docker Hub, deploy to VM. 
+
+- [**Kubernetes Project – Minikube Deployment**](./k8s-minikube-deployment) 
+  Deployed containerized app on Kubernetes with Deployment, Service, and Ingress. 
+
+- [**Monitoring Stack – Prometheus + Grafana**](./monitoring-stack) 
+  Monitored EC2 instance using Prometheus & Grafana dashboards. 
+
+
+
+- [**End-to-End DevOps Pipeline**](./full-devops-pipeline-project) 
+  Full production-grade setup: 
+  - Terraform to provision AWS infra 
+  - CI/CD with GitHub Actions & Docker 
+  - Kubernetes deployment (EKS) with Helm 
+  - Monitoring with Prometheus & Grafana 
 
 ---
 
-## 🛠️ Tools I’m Learning  
-- **Version Control**: Git & GitHub 
-- **Operating System**: Linux (Ubuntu) 
-- **Cloud**: AWS (later projects) 
-- **Infrastructure as Code**: Terraform 
-- **Containers & Orchestration**: Docker, Kubernetes 
-- **Monitoring**: Prometheus, Grafana 
-- **CI/CD**: GitHub Actions 
+## 🛠️ Tools & Technologies
+- **Languages:** Bash, Python, Markdown 
+- **Tools:** Git, GitHub, Docker, Terraform, Kubernetes, Prometheus, Grafana 
+- **Cloud:** AWS (EC2, S3, EKS) 
 
 ---
 
-##  Goals  
-- Build industry-standard DevOps projects step by step 
-- Document everything clearly in GitHub 
-- Use this repo as a portfolio to showcase skills to employers 
+ *Each project folder contains its own README with details, instructions, and screenshots.* 
 
----
-
-##  How to Use This Repo  
-1. Clone the repository: 
-   ```bash
-   git clone https://github.com/<your-username>/devops-portfolio.git
-   cd devops-portfolio
-
-2. Explore project folders for documentation and code.
-
-👤 About Me
-I’m currently learning DevOps without a degree or prior industry experience, using a project-based approach. This repo is proof of my progress and commitment to mastering DevOps tools and practices.
 
