@@ -39,7 +39,7 @@ This repository showcases projects I’ve built to demonstrate hands-on skills i
 
 ---
 
-## 🛠️ Tools & Technologies
+## Tools & Technologies
 - **Languages:** Bash, Python, Markdown 
 - **Tools:** Git, GitHub, Docker, Terraform, Kubernetes, Prometheus, Grafana 
 - **Cloud:** AWS (EC2, S3, EKS) 
