@@ -1,4 +1,3 @@
-
 # 🌐 Linux Cloud Nginx Setup
 
 ## 🧠 Overview
@@ -22,7 +21,7 @@ Verified the Nginx service was running with systemctl:
 bash
 Copy code
 sudo systemctl status nginx
-Tested by using curl to confirm that Nginx was serving pages:
+Tested using curl to confirm that Nginx was serving pages:
 
 bash
 Copy code
