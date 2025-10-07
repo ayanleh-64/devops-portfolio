@@ -3,107 +3,102 @@
 
 ## 🧠 Overview
 This project sets up and configures an **Nginx web server** on an **Ubuntu VM**.  
-It’s part of a broader DevOps learning roadmap to understand how Linux, web servers, and automation work together to host and manage web applications.
+The goal is to practice Linux package management, system services, and server configuration as part of a DevOps learning roadmap.
 
 ---
 
 ## ⚙️ Steps Taken
 
-1. Updated system packages to get the latest software versions:
-   
-   ```sudo apt update && sudo apt upgrade -y```
+1. **Updated package lists** to ensure the latest software versions:
+   ```bash
+   sudo apt update && sudo apt upgrade -y
+Installed Nginx using apt:
 
-2. Installed Nginx using apt:
+bash
+Copy code
+sudo apt install nginx -y
+Verified the Nginx service was running with systemctl:
 
-   
-   ```sudo apt install nginx -y```
-3. Verified the Nginx service was running:
+bash
+Copy code
+sudo systemctl status nginx
+Tested by using curl to confirm that Nginx was serving pages:
 
-   
-   ```sudo systemctl status nginx```
-4. Tested connectivity using:
+bash
+Copy code
+curl http://localhost
+Created a custom index.html and replaced the default page:
 
-  ``` curl http://localhost```
-
-5. Created a custom index.html and replaced the default Nginx page:
-
-  ``` sudo cp index.html /var/www/html/index.html```
-
-
+bash
+Copy code
+sudo cp index.html /var/www/html/index.html
 🏁 Outcome
+Successfully hosted a web server inside the VM.
 
+Learned how to:
 
-Successfully hosted a custom static website inside the VM.
+Install software packages with apt
 
-Gained hands-on experience with:
+Manage and verify system services
 
-Linux package management
+Test web server responses using curl
 
-System services and process control
-
-Basic HTTP server hosting
-
-Replaced the default Nginx page with a custom static HTML blog.
+Replaced the default Nginx landing page with a custom static HTML blog.
 
 🚀 Next Steps (Industry-Standard Improvements)
-
 🔒 1. Secure the Server
-
 Configure firewall rules with:
 
-   
- ```   sudo ufw allow 'Nginx Full'
-       sudo ufw enable```
-
-
-Add HTTPS support using Let’s Encrypt via Certbot.
+bash
+Copy code
+sudo ufw allow 'Nginx Full'
+sudo ufw enable
+Add HTTPS with Let’s Encrypt using Certbot.
 
 ⚙️ 2. Automate Deployment
+Create a simple Bash script to deploy updates automatically:
 
-Create a simple Bash script (deploy.sh) to copy updated web files and reload Nginx:
-
-   
-```
+bash
+Copy code
 #!/bin/bash
-   echo "Deploying website..."
-   sudo cp index.html /var/www/html/index.html
-   sudo systemctl reload nginx
-   echo "✅ Deployment complete!"```
-
-
+echo "Deploying website..."
+sudo cp index.html /var/www/html/index.html
+sudo systemctl reload nginx
+echo "✅ Deployment complete!"
 Make it executable:
 
+bash
+Copy code
+chmod +x deploy.sh
+🧰 3. Explore Logs & Monitoring
+View Nginx access logs:
 
-   ```
-   chmod +x deploy.sh```
+bash
+Copy code
+sudo tail -f /var/log/nginx/access.log
+View Nginx error logs:
 
+bash
+Copy code
+sudo tail -f /var/log/nginx/error.log
+Check service logs with:
 
-🧰 3. System Monitoring
-Explore Nginx logs:
-
-
-   ```
-   sudo tail -f /var/log/nginx/access.log
-   sudo tail -f /var/log/nginx/error.log```
-
-Use journalctl -u nginx for service logs.
-
-
-Learn about htop, df -h, and netstat for system monitoring.
-
+bash
+Copy code
+journalctl -u nginx
 ☁️ 4. Cloud & DevOps Expansion
-Host the VM on a cloud platform (AWS, Azure, or Google Cloud).
+Host the VM on a cloud provider (AWS, Azure, or Google Cloud).
 
-Integrate GitHub for version control and automated deployments (CI/CD).
+Integrate GitHub for version control and CI/CD automation.
 
-Containerize Nginx with Docker for portability.
+Containerize the Nginx setup using Docker for portability and scalability.
 
 📘 Learning Goals
-Deepen understanding of Linux administration.
+Strengthen Linux administration fundamentals.
 
-Build foundations in DevOps, Automation, and Cloud Hosting.
+Gain hands-on experience with server configuration and deployment.
 
-Prepare for end-to-end pipeline integration with Bash and CI/CD tools.
+Build toward full DevOps automation with Bash and CI/CD pipelines.
 
 👤 Author
 Ayanleh Said
