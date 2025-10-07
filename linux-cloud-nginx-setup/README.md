@@ -14,7 +14,7 @@ It’s part of a broader DevOps learning roadmap to understand how Linux, web se
    sudo apt update && sudo apt upgrade -y
 Installed Nginx using apt:
 
-```bash
+   ```bash
    sudo apt install nginx -y
 Verified the Nginx service was running:
 
