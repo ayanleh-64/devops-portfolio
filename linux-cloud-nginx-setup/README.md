@@ -1,3 +1,10 @@
+# 🌐 Linux Cloud Nginx Setup
+
+## 🧠 Overview
+This project sets up and configures an **Nginx web server** on an **Ubuntu VM**.  
+The goal is to practice Linux package management, system services, and server configuration as part of a DevOps learning roadmap.
+
+
 ⚙️ Steps Taken
 
 Updated package lists to ensure the latest software versions:
@@ -109,3 +116,8 @@ Strengthen Linux administration fundamentals.
 Gain hands-on experience with server configuration and deployment.
 
 Build toward full DevOps automation with Bash and CI/CD pipelines.
+
+
+## 👤 Author
+**Ayanleh Said**  
+_DevOps Learner | Linux Enthusiast | Exploring Cloud Automation_
