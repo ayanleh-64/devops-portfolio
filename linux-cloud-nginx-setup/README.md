@@ -10,24 +10,23 @@ It’s part of a broader DevOps learning roadmap to understand how Linux, web se
 ## ⚙️ Steps Taken
 
 1. Updated system packages to get the latest software versions:
-   ```bash
-   sudo apt update && sudo apt upgrade -y
-Installed Nginx using apt:
+   
+   ```sudo apt update && sudo apt upgrade -y```
 
-   ```bash
-   sudo apt install nginx -y
-Verified the Nginx service was running:
+2. Installed Nginx using apt:
 
-   ```bash
-   sudo systemctl status nginx
-Tested connectivity using:
+   
+   ```sudo apt install nginx -y```
+3. Verified the Nginx service was running:
 
-   ```bash
-   curl http://localhost
-Created a custom index.html and replaced the default Nginx page:
+   
+   ```sudo systemctl status nginx```
+4. Tested connectivity using:
 
-   ```bash
-   sudo cp index.html /var/www/html/index.html
+  ``` curl http://localhost```
+5. Created a custom index.html and replaced the default Nginx page:
+
+  ``` sudo cp index.html /var/www/html/index.html```
 🏁 Outcome
 Successfully hosted a custom static website inside the VM.
 
@@ -45,32 +44,32 @@ Replaced the default Nginx page with a custom static HTML blog.
 🔒 1. Secure the Server
 Configure firewall rules with:
 
-   ```bash
-   sudo ufw allow 'Nginx Full'
-   sudo ufw enable
+   
+ ```   sudo ufw allow 'Nginx Full'
+       sudo ufw enable```
 Add HTTPS support using Let’s Encrypt via Certbot.
 
 ⚙️ 2. Automate Deployment
 Create a simple Bash script (deploy.sh) to copy updated web files and reload Nginx:
 
-   ```bash
-
+   
+```
 #!/bin/bash
    echo "Deploying website..."
    sudo cp index.html /var/www/html/index.html
    sudo systemctl reload nginx
-   echo "✅ Deployment complete!"
+   echo "✅ Deployment complete!"```
 Make it executable:
 
-   ```bash
-   chmod +x deploy.sh
+   ```
+   chmod +x deploy.sh```
 🧰 3. System Monitoring
 Explore Nginx logs:
 
 
-   ```bash
+   ```
    sudo tail -f /var/log/nginx/access.log
-   sudo tail -f /var/log/nginx/error.log
+   sudo tail -f /var/log/nginx/error.log```
 Use journalctl -u nginx for service logs.
 
 Learn about htop, df -h, and netstat for system monitoring.
