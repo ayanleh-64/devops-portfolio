@@ -43,7 +43,9 @@ Test web server responses using curl
 
 Replaced the default Nginx landing page with a custom static HTML blog.
 
+
 🚀 Next Steps (Industry-Standard Improvements)
+
 🔒 1. Secure the Server
 
 Configure firewall rules with:
