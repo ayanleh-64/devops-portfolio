@@ -24,10 +24,15 @@ It’s part of a broader DevOps learning roadmap to understand how Linux, web se
 4. Tested connectivity using:
 
   ``` curl http://localhost```
+
 5. Created a custom index.html and replaced the default Nginx page:
 
   ``` sudo cp index.html /var/www/html/index.html```
+
+
 🏁 Outcome
+
+
 Successfully hosted a custom static website inside the VM.
 
 Gained hands-on experience with:
@@ -41,15 +46,20 @@ Basic HTTP server hosting
 Replaced the default Nginx page with a custom static HTML blog.
 
 🚀 Next Steps (Industry-Standard Improvements)
+
 🔒 1. Secure the Server
+
 Configure firewall rules with:
 
    
  ```   sudo ufw allow 'Nginx Full'
        sudo ufw enable```
+
+
 Add HTTPS support using Let’s Encrypt via Certbot.
 
 ⚙️ 2. Automate Deployment
+
 Create a simple Bash script (deploy.sh) to copy updated web files and reload Nginx:
 
    
@@ -59,10 +69,15 @@ Create a simple Bash script (deploy.sh) to copy updated web files and reload Ngi
    sudo cp index.html /var/www/html/index.html
    sudo systemctl reload nginx
    echo "✅ Deployment complete!"```
+
+
 Make it executable:
+
 
    ```
    chmod +x deploy.sh```
+
+
 🧰 3. System Monitoring
 Explore Nginx logs:
 
@@ -70,7 +85,9 @@ Explore Nginx logs:
    ```
    sudo tail -f /var/log/nginx/access.log
    sudo tail -f /var/log/nginx/error.log```
+
 Use journalctl -u nginx for service logs.
+
 
 Learn about htop, df -h, and netstat for system monitoring.
 
