@@ -2,27 +2,32 @@
 
 Updated package lists to ensure the latest software versions:
 
+```
 sudo apt update && sudo apt upgrade -y
-
+```
 
 Installed Nginx using apt:
-
+```
 sudo apt install nginx -y
-
+```
 
 Verified the Nginx service was running with systemctl:
 
+```
 sudo systemctl status nginx
-
+```
 
 Tested using curl to confirm that Nginx was serving pages:
 
+```
 curl http://localhost
-
+```
 
 Created a custom index.html and replaced the default page:
 
+```
 sudo cp index.html /var/www/html/index.html
+```
 
 🏁 Outcome
 
@@ -43,9 +48,10 @@ Replaced the default Nginx landing page with a custom static HTML blog.
 
 Configure firewall rules with:
 
+```
 sudo ufw allow 'Nginx Full'
 sudo ufw enable
-
+```
 
 Add HTTPS with Let’s Encrypt using Certbot.
 
@@ -53,32 +59,38 @@ Add HTTPS with Let’s Encrypt using Certbot.
 
 Create a simple Bash script to deploy updates automatically:
 
+```
 #!/bin/bash
 echo "Deploying website..."
 sudo cp index.html /var/www/html/index.html
 sudo systemctl reload nginx
 echo "✅ Deployment complete!"
-
+```
 
 Make it executable:
 
+```
 chmod +x deploy.sh
-
+```
 🧰 3. Explore Logs & Monitoring
 
 View Nginx access logs:
 
+```
 sudo tail -f /var/log/nginx/access.log
-
+```
 
 View Nginx error logs:
 
+```
 sudo tail -f /var/log/nginx/error.log
-
+```
 
 Check service logs with:
 
+```
 journalctl -u nginx
+```
 
 ☁️ 4. Cloud & DevOps Expansion
 
