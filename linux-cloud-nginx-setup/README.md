@@ -14,24 +14,20 @@ It’s part of a broader DevOps learning roadmap to understand how Linux, web se
    sudo apt update && sudo apt upgrade -y
 Installed Nginx using apt:
 
-bash
-Copy code
-sudo apt install nginx -y
+```bash
+   sudo apt install nginx -y
 Verified the Nginx service was running:
 
-bash
-Copy code
-sudo systemctl status nginx
+   ```bash
+   sudo systemctl status nginx
 Tested connectivity using:
 
-bash
-Copy code
-curl http://localhost
+   ```bash
+   curl http://localhost
 Created a custom index.html and replaced the default Nginx page:
 
-bash
-Copy code
-sudo cp index.html /var/www/html/index.html
+   ```bash
+   sudo cp index.html /var/www/html/index.html
 🏁 Outcome
 Successfully hosted a custom static website inside the VM.
 
@@ -49,34 +45,32 @@ Replaced the default Nginx page with a custom static HTML blog.
 🔒 1. Secure the Server
 Configure firewall rules with:
 
-bash
-Copy code
-sudo ufw allow 'Nginx Full'
-sudo ufw enable
+   ```bash
+   sudo ufw allow 'Nginx Full'
+   sudo ufw enable
 Add HTTPS support using Let’s Encrypt via Certbot.
 
 ⚙️ 2. Automate Deployment
 Create a simple Bash script (deploy.sh) to copy updated web files and reload Nginx:
 
-bash
-Copy code
+   ```bash
+
 #!/bin/bash
-echo "Deploying website..."
-sudo cp index.html /var/www/html/index.html
-sudo systemctl reload nginx
-echo "✅ Deployment complete!"
+   echo "Deploying website..."
+   sudo cp index.html /var/www/html/index.html
+   sudo systemctl reload nginx
+   echo "✅ Deployment complete!"
 Make it executable:
 
-bash
-Copy code
-chmod +x deploy.sh
+   ```bash
+   chmod +x deploy.sh
 🧰 3. System Monitoring
 Explore Nginx logs:
 
-bash
-Copy code
-sudo tail -f /var/log/nginx/access.log
-sudo tail -f /var/log/nginx/error.log
+
+   ```bash
+   sudo tail -f /var/log/nginx/access.log
+   sudo tail -f /var/log/nginx/error.log
 Use journalctl -u nginx for service logs.
 
 Learn about htop, df -h, and netstat for system monitoring.
